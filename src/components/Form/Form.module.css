@@ -1,0 +1,35 @@
+.formTitle{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border: 1px solid black;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+input{
+    width: 200px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.formButton{
+    width: 100px;
+    margin-left: 10px;
+    margin: 20px 0px 10px 10px;
+    background-color: rgb(59, 145, 199);
+    border-radius: 6px;
+    border-color:transparent;
+    cursor:pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.formButton:active{
+    box-shadow: none;
+}

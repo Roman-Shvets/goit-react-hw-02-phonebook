@@ -1,0 +1,14 @@
+.listBlock{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.listItem{
+    margin: 10px 0px;
+    font-size: 20px;
+}
+
+.buttonDelete{
+    height: 20px;
+}
