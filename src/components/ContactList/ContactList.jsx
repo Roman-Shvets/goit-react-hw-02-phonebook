@@ -1,37 +1,37 @@
-import React, { Component } from "react";
-import ContactListItem from "../ContactListItem/ContactListItem"
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import ContactListItem from '../ContactListItem/ContactListItem';
+import PropTypes from 'prop-types';
 
 class ContactList extends Component {
- 
-render() {
+  render() {
     return (
-    <div>
-      <ul>
-          {this.props.contacts
-            .filter((element)=>element.name.toLowerCase().includes(this.props.filter.toLowerCase()))
-            .map((item) => {
+      <div>
+        <ul>
+          {this.props.contacts.map(item => {
             return (
-            <ContactListItem
+              <ContactListItem
                 key={item.id}
                 keyIndex={item.id}
                 name={item.name}
                 number={item.number}
-                handleContactDelete={this.props.handleContactDelete} />
-            )
+                handleContactDelete={this.props.handleContactDelete}
+              />
+            );
           })}
         </ul>
-     </div>
+      </div>
     );
   }
 }
 export default ContactList;
 
 ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired })),
-  filter:PropTypes.string.isRequired,
-  handleContactDelete: PropTypes.func.isRequired
-}
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+  handleContactDelete: PropTypes.func.isRequired,
+};
